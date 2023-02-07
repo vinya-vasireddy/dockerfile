@@ -1,0 +1,11 @@
+# Use an official Nginx image as the base image
+FROM nginx:1.19
+
+# Copy the HTML files to the default Nginx document root
+COPY . /usr/share/nginx/html
+# Expose the default HTTP port
+EXPOSE 80
+
+# Start the Nginx server
+CMD ["nginx", "-g", "daemon off;"]
+
